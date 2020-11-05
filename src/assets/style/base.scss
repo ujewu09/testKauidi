@@ -1,0 +1,69 @@
+/*需要切换的颜色变量*/
+$_color:#ffcc00;
+$color-primary2:#ffcc00;
+$bg-wrapper: #fef9eb;
+
+$b_color: 2px solid #ffcc00;
+$b_color2: 2px solid #ffcc00;
+
+$b_color_1px: 1px solid #ffcc00;
+$h_color1: #ffcc00;
+$h_color2: #f16643;
+
+@mixin color($color) {
+  color: $color;
+
+  [data-theme="primary1"] & {
+    color: $_color;
+  }
+
+  [data-theme="primary2"] & {
+    color: $color-primary2;
+  }
+
+
+}
+@mixin backgroundColor($color) {
+  background-color: $color;
+
+  [data-theme="primary1"] & {
+    background-color: $_color;
+  }
+
+  [data-theme="primary2"] & {
+    background-color: $color-primary2;
+  }
+
+
+}
+
+@mixin hover($color) {
+  background-color: $color;
+
+  [data-theme="primary1"] & {
+    background-color: $h_color1;
+  }
+  [data-theme="primary2"] & {
+    background-color: $h_color2;
+  }
+
+}
+@mixin hoverBorder($color) {
+  border-color: $color;
+}
+@mixin borderColor($color) {
+  border-color: $color;
+}
+
+@mixin border($color) {
+  border-left: $color;
+
+  [data-theme="primary1"] & {
+    border-left: $b_color;
+  }
+
+  [data-theme="primary2"] & {
+    border-left: $b_color2;
+  }
+
+}
